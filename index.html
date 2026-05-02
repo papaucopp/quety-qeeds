@@ -559,73 +559,43 @@
         </div>
     </section>
 
-    <!-- Gemini AI Feature: Bedtime Story Generator -->
-    <section id="cerita-ajaib" class="py-20 bg-gradient-to-b from-white to-brand-sky/20 relative overflow-hidden">
+    <!-- Mini Game Section: Cursor Pac-Man -->
+    <section id="mini-game" class="py-20 bg-gradient-to-b from-white to-brand-sky/20 relative overflow-hidden">
         <!-- Decorative background elements -->
         <div class="absolute top-10 left-10 w-20 h-20 bg-brand-yellow/30 rounded-full blur-xl animate-pulse-slow"></div>
         <div class="absolute bottom-10 right-10 w-32 h-32 bg-brand-red/20 rounded-full blur-xl animate-pulse-slow delay-1000"></div>
 
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative-content">
-            <div class="bg-white rounded-[3rem] p-8 md:p-12 shadow-floating border border-white gs-reveal">
-                <div class="text-center mb-8">
-                    <div class="inline-block bg-brand-sky/10 text-brand-deep px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-brand-sky/20">
-                        <i class="fas fa-wand-magic-sparkles text-brand-sky"></i> Dikuasakan oleh AI Gemini
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-head font-bold text-brand-deep mb-4">Pencipta Cerita Dongeng Si Manja ✨</h2>
-                    <p class="text-gray-600">Jana cerita sebelum tidur yang istimewa untuk anak anda. Masukkan nama mereka dan tema kegemaran, AI kami akan mengarang cerita yang penuh pengajaran moral dan nilai murni!</p>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative-content">
+            <div class="text-center mb-10 gs-reveal">
+                <div class="inline-block bg-brand-yellow/20 text-brand-deep px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-brand-yellow/40">
+                    <i class="fas fa-gamepad text-brand-yellow text-lg"></i> Mari Bermain!
                 </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2" for="child-name">Nama Panggilan Anak:</label>
-                        <input type="text" id="child-name" placeholder="Cth: Adam, Sofia..." class="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:bg-white transition-all">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2" for="story-theme">Tema / Haiwan Kegemaran:</label>
-                        <input type="text" id="story-theme" placeholder="Cth: Kucing yang berani, Pergi ke bulan..." class="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:bg-white transition-all">
-                    </div>
+                <h2 class="text-3xl md:text-4xl font-head font-bold text-brand-deep mb-4">Permainan Mini Quety Qeeds</h2>
+                <p class="text-gray-600">Gerakkan kursor atau jari anda pada kotak di bawah untuk mengawal Pac-Man dan makan sebanyak mungkin epal merah!</p>
+                <div class="mt-6 text-2xl font-bold font-head text-brand-deep bg-white inline-block px-8 py-3 rounded-full shadow-sm border border-brand-sky/30">
+                    Markah Anda: <span id="game-score" class="text-brand-red">0</span>
                 </div>
+            </div>
 
-                <div class="text-center">
-                    <button id="btn-generate-story" onclick="generateStory()" class="anime-btn bg-brand-deep text-white font-head font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-blue-800 transition-all flex items-center justify-center gap-3 mx-auto w-full md:w-auto text-lg">
-                        <i class="fas fa-sparkles"></i> Jana Cerita Ajaib ✨
-                    </button>
-                </div>
-
-                <!-- Loading State -->
-                <div id="story-loading" class="hidden mt-10 text-center">
-                    <div class="inline-block w-12 h-12 border-4 border-brand-sky/30 border-t-brand-sky rounded-full animate-spin mb-4"></div>
-                    <p class="text-gray-500 font-semibold animate-pulse">Menulis cerita istimewa untuk si manja... ✨</p>
-                </div>
-
-                <!-- Error State -->
-                <div id="story-error" class="hidden mt-8 p-4 bg-red-50 text-red-600 rounded-2xl text-center border border-red-100 text-sm font-semibold">
-                </div>
-
-                <!-- Story Result Area -->
-                <div id="story-result-container" class="hidden mt-10 opacity-0 transition-opacity duration-1000">
-                    <div class="relative bg-[#FDF8F5] p-8 md:p-10 rounded-3xl border border-brand-yellow/30 shadow-inner">
-                        <i class="fas fa-quote-left text-4xl text-brand-yellow/40 absolute top-6 left-6"></i>
-                        <div id="story-content" class="relative z-10 text-gray-700 leading-relaxed font-body text-lg whitespace-pre-wrap mt-4">
-                            <!-- Story goes here -->
-                        </div>
-                        <div class="mt-8 flex justify-end">
-                            <button onclick="copyStory()" class="text-sm bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-xl hover:bg-brand-sky hover:text-white hover:border-brand-sky transition-colors flex items-center gap-2">
-                                <i class="far fa-copy"></i> Salin Cerita
-                            </button>
-                        </div>
+            <div class="bg-white rounded-[2rem] p-3 md:p-6 shadow-floating border border-brand-sky/30 gs-reveal mx-auto flex justify-center w-full relative">
+                <!-- Instruction Overlay -->
+                <div id="game-overlay" class="absolute inset-0 z-10 flex items-center justify-center bg-white/60 backdrop-blur-sm rounded-[2rem] cursor-pointer" onclick="startGame()">
+                    <div class="bg-brand-deep text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-3">
+                        <i class="fas fa-play"></i> Tekan Untuk Mula Bermain
                     </div>
                 </div>
+                <!-- Game Canvas -->
+                <canvas id="pacman-canvas" class="w-full max-w-4xl h-[300px] md:h-[400px] bg-[#FDF8F5] rounded-xl shadow-inner border border-gray-200 touch-none cursor-crosshair"></canvas>
             </div>
         </div>
     </section>
 
     <!-- 8 & 9. Company Info & Location Section -->
-    <section id="lokasi" class="py-20 bg-brand-bg relative">
+    <section id="lokasi" class="py-20 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-3 gap-8">
                 
-                <div class="lg:col-span-1 glass-card p-8 gs-reveal">
+                <div class="lg:col-span-1 glass-card p-8 gs-reveal bg-[#FDF8F5]">
                     <h3 class="text-2xl font-head font-bold text-brand-deep mb-6 border-b border-gray-200 pb-4">Maklumat Syarikat</h3>
                     <div class="space-y-4 text-sm text-gray-700">
                         <div><p class="text-gray-500 text-xs uppercase tracking-wider font-bold mb-1">Nama Perniagaan</p><p class="font-bold text-brand-deep text-base">TADIKA KUALITI TEKNOLOGI</p></div>
@@ -638,13 +608,13 @@
                 <div class="lg:col-span-2 gs-reveal">
                     <h3 class="text-3xl font-head font-bold text-brand-deep mb-6 text-center md:text-left">Lokasi Kami</h3>
                     <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-[#FDF8F5] rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-12 h-12 bg-brand-sky/20 rounded-full flex items-center justify-center text-brand-sky text-xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
                             <h4 class="font-head font-bold text-xl text-brand-deep mb-2">Terengganu</h4>
                             <p class="text-gray-600 text-sm mb-4 min-h-[60px]">Quety Qeeds, Lot 8756, Kampung Pak Tuyu, 21030 Kuala Nerus, Terengganu.</p>
                             <a href="https://maps.app.goo.gl/F1Rcymth1LdPyixE7?g_st=ic" target="_blank" class="inline-block text-brand-deep font-bold text-sm hover:text-brand-sky transition-colors">Buka di Google Maps <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
                         </div>
-                        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-[#FDF8F5] rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-12 h-12 bg-brand-yellow/30 rounded-full flex items-center justify-center text-brand-yellow text-xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
                             <h4 class="font-head font-bold text-xl text-brand-deep mb-2">Selangor</h4>
                             <p class="text-gray-600 text-sm mb-4 min-h-[60px]">No. 29/45D, Taman Saira, Bandar Sultan Suleiman, 42000 Pelabuhan Klang, Selangor.</p>
@@ -717,7 +687,6 @@
                 <div class="flex items-center gap-3 bg-brand-sky/10 px-4 py-2 rounded-full border border-brand-sky/20">
                     <i class="fas fa-chart-line text-brand-deep"></i>
                     <span class="text-sm font-bold text-brand-deep">Jumlah Pelawat:</span>
-                    <!-- Lencana API VisitorBadge (Akan bertambah secara automatik setiap kali laman web dibuka) -->
                     <img src="https://api.visitorbadge.io/api/visitors?path=quetyqeeds-official-website&label=VISITS&labelColor=%230054A6&countColor=%2300AEEF" alt="Visitor Count" class="h-5 rounded">
                 </div>
 
@@ -979,10 +948,9 @@
             
             // --- 5. Email Copy Logic ---
             window.copyEmail = function(e) {
-                e.preventDefault(); // Halang dari sekadar membuka pautan kosong jika tiada app
+                e.preventDefault();
                 const email = "quetyqeeds@gmail.com";
                 
-                // Gunakan execCommand untuk menyalin teks (berfungsi dengan baik untuk pelbagai device)
                 const tempInput = document.createElement("input");
                 tempInput.value = email;
                 document.body.appendChild(tempInput);
@@ -995,7 +963,6 @@
                 }
                 document.body.removeChild(tempInput);
                 
-                // Cuba buka aplikasi emel (fallback)
                 setTimeout(() => {
                     window.location.href = "mailto:" + email;
                 }, 800);
@@ -1014,132 +981,143 @@
                 }, 3000);
             }
             
-            // --- 6. Gemini AI Story Generator Logic ---
-            // Sila masukkan Gemini API Key anda di antara tanda petik di bawah jika anda memuat turun fail ini.
-            // Anda boleh dapatkan API Key percuma di: https://aistudio.google.com/
-            const apiKey = "AIzaSyBhjNt2DegT5bWhQsxxJlKXi60WRPtalPY"; 
+            // --- 6. Mini Game Logic (Cursor Pac-Man) ---
+            const pCanvas = document.getElementById('pacman-canvas');
+            const pCtx = pCanvas.getContext('2d');
+            const scoreEl = document.getElementById('game-score');
+            const overlay = document.getElementById('game-overlay');
+            
+            let gameScore = 0;
+            let gameRunning = false;
+            let mousePos = { x: 0, y: 0 };
+            let player = { x: 0, y: 0, radius: 24, speed: 5, angle: 0 };
+            let food = { x: 0, y: 0, radius: 10 };
 
-            async function fetchWithRetry(url, options, maxRetries = 5) {
-                const delays = [1000, 2000, 4000, 8000, 16000];
-                for (let i = 0; i < maxRetries; i++) {
-                    try {
-                        const response = await fetch(url, options);
-                        if (!response.ok) {
-                            const errorData = await response.json().catch(() => ({}));
-                            throw new Error(`HTTP error! status: ${response.status} - ${errorData.error?.message || 'Unknown error'}`);
-                        }
-                        return await response.json();
-                    } catch (error) {
-                        if (i === maxRetries - 1) throw error;
-                        console.warn(`Attempt ${i + 1} failed. Retrying in ${delays[i]}ms...`);
-                        await new Promise(res => setTimeout(res, delays[i]));
-                    }
+            function resizeCanvas() {
+                pCanvas.width = pCanvas.clientWidth;
+                pCanvas.height = pCanvas.clientHeight;
+                if(!gameRunning) {
+                    player.x = pCanvas.width / 2;
+                    player.y = pCanvas.height / 2;
+                    mousePos.x = player.x;
+                    mousePos.y = player.y;
+                    spawnFood();
+                    drawGame();
                 }
             }
+            window.addEventListener('resize', resizeCanvas);
+            
+            function spawnFood() {
+                const padding = 30;
+                food.x = padding + Math.random() * (pCanvas.width - padding * 2);
+                food.y = padding + Math.random() * (pCanvas.height - padding * 2);
+            }
 
-            window.generateStory = async function() {
-                const nameInput = document.getElementById('child-name').value.trim();
-                const themeInput = document.getElementById('story-theme').value.trim();
-                const btn = document.getElementById('btn-generate-story');
-                const loadingContainer = document.getElementById('story-loading');
-                const resultContainer = document.getElementById('story-result-container');
-                const contentContainer = document.getElementById('story-content');
-                const errorContainer = document.getElementById('story-error');
+            // Track mouse/touch inside canvas
+            function updateMousePos(clientX, clientY) {
+                const rect = pCanvas.getBoundingClientRect();
+                mousePos.x = clientX - rect.left;
+                mousePos.y = clientY - rect.top;
+            }
 
-                if (!nameInput || !themeInput) {
-                    showToast("Sila masukkan nama dan tema kegemaran terlebih dahulu!");
-                    return;
+            pCanvas.addEventListener('mousemove', (e) => updateMousePos(e.clientX, e.clientY));
+            pCanvas.addEventListener('touchstart', (e) => updateMousePos(e.touches[0].clientX, e.touches[0].clientY), {passive: true});
+            pCanvas.addEventListener('touchmove', (e) => {
+                if(gameRunning) e.preventDefault(); // Prevent scrolling while playing
+                updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+            }, {passive: false});
+
+            window.startGame = function() {
+                overlay.style.display = 'none';
+                gameRunning = true;
+                gameScore = 0;
+                scoreEl.innerText = gameScore;
+                spawnFood();
+                updateGameLoop();
+            }
+
+            function drawGame() {
+                // Clear background
+                pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+
+                // Draw Food (Apple/Red dot)
+                pCtx.beginPath();
+                pCtx.arc(food.x, food.y, food.radius, 0, 2 * Math.PI);
+                pCtx.fillStyle = '#FF0000'; // Brand Red
+                pCtx.fill();
+                pCtx.closePath();
+                // Add simple stem to make it look like an apple
+                pCtx.beginPath();
+                pCtx.moveTo(food.x, food.y - food.radius);
+                pCtx.lineTo(food.x + 4, food.y - food.radius - 6);
+                pCtx.strokeStyle = '#8B4513';
+                pCtx.lineWidth = 3;
+                pCtx.stroke();
+                pCtx.closePath();
+
+                // Draw Pac-Man
+                pCtx.save();
+                pCtx.translate(player.x, player.y);
+                pCtx.rotate(player.angle);
+
+                // Animate mouth opening and closing
+                const time = Date.now() / 150;
+                const mouthOffset = gameRunning ? Math.abs(Math.sin(time)) * 0.25 : 0.1; 
+
+                pCtx.beginPath();
+                pCtx.arc(0, 0, player.radius, mouthOffset * Math.PI, (2 - mouthOffset) * Math.PI);
+                pCtx.lineTo(0, 0);
+                pCtx.fillStyle = '#FFF200'; // Brand Yellow
+                pCtx.fill();
+                
+                // Border for Pacman
+                pCtx.lineWidth = 2;
+                pCtx.strokeStyle = '#334155';
+                pCtx.stroke();
+                pCtx.closePath();
+
+                // Draw Eye
+                pCtx.beginPath();
+                pCtx.arc(0, -12, 4, 0, 2 * Math.PI);
+                pCtx.fillStyle = '#0054A6'; // Brand Deep Blue
+                pCtx.fill();
+                pCtx.closePath();
+
+                pCtx.restore();
+            }
+
+            function updateGameLoop() {
+                if (!gameRunning) return;
+
+                // Move player towards cursor
+                const dx = mousePos.x - player.x;
+                const dy = mousePos.y - player.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                // Move only if cursor is a bit far
+                if (dist > 5) {
+                    player.x += (dx / dist) * player.speed;
+                    player.y += (dy / dist) * player.speed;
+                    player.angle = Math.atan2(dy, dx);
                 }
 
-                // UI Loading State
-                btn.disabled = true;
-                btn.style.opacity = '0.7';
-                resultContainer.classList.add('hidden');
-                resultContainer.classList.remove('opacity-100');
-                errorContainer.classList.add('hidden');
-                loadingContainer.classList.remove('hidden');
-
-                const prompt = `Tuliskan sebuah cerita pendek sebelum tidur (bedtime story) dalam Bahasa Melayu. 
-Nama watak utama ialah "${nameInput}". 
-Tema/konsep cerita ini adalah mengenai "${themeInput}". 
-Syarat-syarat:
-1. Cerita mestilah sesuai untuk kanak-kanak berumur 4-6 tahun.
-2. Gunakan gaya bahasa yang ceria, mudah difahami, dan memupuk daya imaginasi (seperti EYFS/KSPK).
-3. Pastikan ada pengajaran moral atau nilai murni yang jelas di akhir cerita.
-4. Formatkan cerita menggunakan perenggan yang pendek agar mudah dibaca oleh ibu bapa.
-5. Jangan gunakan terlalu banyak format markdown, hanya teks biasa dengan perenggan (gunakan perenggan baru untuk memisahkan idea).`;
-
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-                const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                    systemInstruction: { 
-                        parts: [{ text: "Anda adalah seorang guru tadika yang sangat penyayang, kreatif, dan pandai bercerita kepada kanak-kanak kecil." }] 
-                    }
-                };
-
-                try {
-                    const result = await fetchWithRetry(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
-                    
-                    if (generatedText) {
-                        // Simple formatting to handle basic markdown output from Gemini
-                        let formattedText = generatedText
-                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                            .replace(/\*(.*?)\*/g, '<em>$1</em>');
-                        
-                        contentContainer.innerHTML = formattedText;
-                        
-                        loadingContainer.classList.add('hidden');
-                        resultContainer.classList.remove('hidden');
-                        
-                        // Small delay for fade-in effect
-                        setTimeout(() => {
-                            resultContainer.classList.add('opacity-100');
-                        }, 50);
-                        
-                        // Scroll slightly to result
-                        resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    } else {
-                        throw new Error("Respons dari AI tidak lengkap.");
-                    }
-                } catch (error) {
-                    console.error("Gemini API Error:", error);
-                    loadingContainer.classList.add('hidden');
-                    
-                    let errorMsg = "Maaf, sistem AI sedang berehat sebentar. Sila cuba lagi selepas beberapa ketika.";
-                    if (error.message.includes("403") || error.message.includes("unregistered callers")) {
-                        errorMsg = "Ralat Akses: Sila masukkan 'Google Gemini API Key' anda di dalam kod HTML (pada bahagian const apiKey = \"\") jika anda menjalankan fail ini di komputer anda sendiri.";
-                    } else {
-                        errorMsg += " (" + error.message + ")";
-                    }
-                    
-                    errorContainer.innerText = errorMsg;
-                    errorContainer.classList.remove('hidden');
-                } finally {
-                    btn.disabled = false;
-                    btn.style.opacity = '1';
+                // Check collision with food
+                const distToFood = Math.sqrt(Math.pow(player.x - food.x, 2) + Math.pow(player.y - food.y, 2));
+                if (distToFood < player.radius + food.radius) {
+                    gameScore += 10;
+                    scoreEl.innerText = gameScore;
+                    // Add simple bump animation to score
+                    anime({ targets: scoreEl, scale: [1.5, 1], duration: 400, easing: 'easeOutElastic(1, .8)' });
+                    spawnFood();
                 }
-            };
 
-            window.copyStory = function() {
-                const storyText = document.getElementById('story-content').innerText;
-                const tempInput = document.createElement("textarea");
-                tempInput.value = storyText;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                try {
-                    document.execCommand("copy");
-                    showToast("Cerita berjaya disalin!");
-                } catch(err) {
-                    console.error("Gagal menyalin cerita", err);
-                }
-                document.body.removeChild(tempInput);
-            };
+                drawGame();
+                requestAnimationFrame(updateGameLoop);
+            }
+
+            // Initial setup
+            setTimeout(resizeCanvas, 100);
+
         });
     </script>
 </body>
