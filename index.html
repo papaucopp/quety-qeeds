@@ -184,7 +184,8 @@
                     <a href="#utama" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Utama</a>
                     <a href="#tentang-kami" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Tentang Kami</a>
                     <a href="#kurikulum" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Kurikulum</a>
-                    <a href="#jadual" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Jadual Harian</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Galeri</a>
+                    <a href="#resipi-bekal" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">AI Bekal</a>
                     <a href="#lokasi" class="text-gray-600 hover:text-brand-deep font-semibold transition-colors">Lokasi</a>
                     
                     <!-- CTA Button -->
@@ -207,7 +208,8 @@
             <a href="#utama" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Utama</a>
             <a href="#tentang-kami" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Tentang Kami</a>
             <a href="#kurikulum" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Kurikulum</a>
-            <a href="#jadual" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Jadual Harian</a>
+            <a href="#galeri" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Galeri</a>
+            <a href="#resipi-bekal" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">AI Bekal Sekolah</a>
             <a href="#lokasi" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-brand-deep hover:bg-brand-sky/20">Lokasi</a>
             <a href="https://wa.me/60148124747?text=Salam%20Puan%2C%20saya%20nak%20tanya%20berkenaan%20Tadika%20Quety%20Qeeds" class="block mt-4 text-center bg-brand-yellow text-brand-deep font-head font-bold px-6 py-3 rounded-full shadow-sm border-2 border-transparent">
                 <i class="fab fa-whatsapp mr-2"></i> WhatsApp Kami
@@ -254,7 +256,7 @@
         
         <!-- Wave shape divider bottom -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-10">
-            <svg class="relative block w-full h-[50px] lg:h-[80px]" data-name="Layer 1" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <svg class="relative block w-full h-[50px] lg:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FDF8F5"></path>
             </svg>
         </div>
@@ -559,6 +561,126 @@
         </div>
     </section>
 
+    <!-- 8. Gallery / Photo Album Section -->
+    <section id="galeri" class="py-20 bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative-content">
+            <div class="text-center mb-12 gs-reveal">
+                <div class="inline-block bg-brand-red/20 text-brand-red px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-brand-red/40">
+                    <i class="fas fa-images text-brand-red text-lg"></i> Galeri Quety Qeeds
+                </div>
+                <h2 class="text-3xl md:text-4xl font-head font-bold text-brand-deep mb-4">Album Si Manja</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Koleksi memori indah anak-anak. Tekan pada mana-mana thumbnail di bawah untuk membuka helaian album.</p>
+            </div>
+            
+            <!-- Grid 3x3 pada semua saiz skrin -->
+            <div class="grid grid-cols-3 gap-2 md:gap-4 gs-reveal max-w-4xl mx-auto">
+                <!-- Album 1 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album1')">
+                    <img src="album1-1.JPG" alt="Album 1 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 1</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Aktiviti Seni</h4>
+                    </div>
+                </div>
+                <!-- Album 2 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album2')">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600&auto=format&fit=crop" alt="Album 2 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 2</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Hari Sukan</h4>
+                    </div>
+                </div>
+                <!-- Album 3 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album3')">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop" alt="Album 3 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 3</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Bermain Air</h4>
+                    </div>
+                </div>
+                <!-- Album 4 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album4')">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop" alt="Album 4 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 4</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Kelas Membaca</h4>
+                    </div>
+                </div>
+                <!-- Album 5 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album5')">
+                    <img src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?q=80&w=600&auto=format&fit=crop" alt="Album 5 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 5</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Sambutan Raya</h4>
+                    </div>
+                </div>
+                <!-- Album 6 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album6')">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" alt="Album 6 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 6</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Sains Mudah</h4>
+                    </div>
+                </div>
+                <!-- Album 7 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album7')">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop" alt="Album 7 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 7</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Hari Lahir</h4>
+                    </div>
+                </div>
+                <!-- Album 8 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album8')">
+                    <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=600&auto=format&fit=crop" alt="Album 8 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 8</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Aktiviti Basikal</h4>
+                    </div>
+                </div>
+                <!-- Album 9 -->
+                <div class="overflow-hidden rounded-xl md:rounded-3xl aspect-square bg-gray-200 group relative cursor-pointer" onclick="openAlbum('album9')">
+                    <img src="https://images.unsplash.com/photo-1564423455437-b4d2938a9d18?q=80&w=600&auto=format&fit=crop" alt="Album 9 Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-brand-deep/20 to-transparent transition-opacity duration-300"></div>
+                    <div class="absolute bottom-2 left-2 md:bottom-4 md:left-4 text-white">
+                        <p class="text-[10px] md:text-xs font-bold mb-0 md:mb-1"><i class="fas fa-layer-group"></i> Album 9</p>
+                        <h4 class="font-head font-bold text-[11px] md:text-lg leading-tight hidden sm:block">Mini Farm</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Container for Albums -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center opacity-0 transition-opacity duration-300">
+        <!-- Close Button -->
+        <span class="absolute top-6 right-6 text-white text-4xl md:text-5xl cursor-pointer hover:text-brand-yellow transition-colors select-none z-50" onclick="closeLightbox()">&times;</span>
+        
+        <!-- Image Counter -->
+        <div class="absolute top-6 left-6 text-white font-head font-bold text-sm md:text-lg bg-black/50 px-4 py-2 rounded-xl backdrop-blur-sm z-50" id="lightbox-counter">
+            1 / 10
+        </div>
+        
+        <!-- Left Nav Arrow -->
+        <button class="absolute left-2 md:left-10 text-white text-4xl md:text-6xl hover:text-brand-yellow transition-colors z-50 focus:outline-none px-2 py-8" onclick="prevAlbumImage(event)">&#10094;</button>
+        
+        <!-- Image Viewer Area -->
+        <div class="w-full h-full p-4 md:p-20 flex items-center justify-center" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="Album Foto Penuh" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation();">
+        </div>
+
+        <!-- Right Nav Arrow -->
+        <button class="absolute right-2 md:right-10 text-white text-4xl md:text-6xl hover:text-brand-yellow transition-colors z-50 focus:outline-none px-2 py-8" onclick="nextAlbumImage(event)">&#10095;</button>
+    </div>
+
     <!-- Mini Game Section: Cursor Pac-Man -->
     <section id="mini-game" class="py-20 bg-gradient-to-b from-white to-brand-sky/20 relative overflow-hidden">
         <!-- Decorative background elements -->
@@ -590,12 +712,57 @@
         </div>
     </section>
 
+    <!-- NEW GEMINI AI FEATURE: LUNCHBOX RECIPE GENERATOR -->
+    <section id="resipi-bekal" class="py-20 bg-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative-content">
+            <div class="bg-[#FDF8F5] rounded-[3rem] p-8 md:p-12 shadow-soft border border-brand-red/20 gs-reveal">
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-brand-red/10 text-brand-red px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-brand-red/20">
+                        <i class="fas fa-utensils text-brand-red"></i> Dikuasakan oleh AI Gemini
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-head font-bold text-brand-deep mb-4">Pencipta Resipi Bekal Sihat ✨</h2>
+                    <p class="text-gray-600">Buntu memikirkan bekal sekolah anak esok? Masukkan bahan-bahan yang ada di dapur anda, dan AI pakar nutrisi kami akan meracik resipi bekal yang sihat, mudah, dan pasti disukai si manja!</p>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-gray-700 mb-2" for="ingredients-input">Bahan-bahan di dapur anda (pisahkan dengan koma):</label>
+                    <textarea id="ingredients-input" rows="3" placeholder="Contoh: Roti, telur, sosej, timun, keju..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition-all"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button id="btn-generate-recipe" onclick="generateRecipe()" class="anime-btn bg-brand-red text-white font-head font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-red-600 transition-all flex items-center justify-center gap-3 mx-auto w-full md:w-auto text-lg">
+                        <i class="fas fa-magic"></i> Jana Resipi Bekal ✨
+                    </button>
+                </div>
+
+                <!-- Loading State -->
+                <div id="recipe-loading" class="hidden mt-10 text-center">
+                    <div class="inline-block w-12 h-12 border-4 border-brand-red/30 border-t-brand-red rounded-full animate-spin mb-4"></div>
+                    <p class="text-gray-500 font-semibold animate-pulse">Sedang meracik resipi rahsia yang sedap... ✨</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="recipe-error" class="hidden mt-8 p-4 bg-red-50 text-red-600 rounded-2xl text-center border border-red-100 text-sm font-semibold"></div>
+
+                <!-- Recipe Result Area -->
+                <div id="recipe-result-container" class="hidden mt-10 opacity-0 transition-opacity duration-1000">
+                    <div class="relative bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm">
+                        <i class="fas fa-heart text-4xl text-brand-red/10 absolute top-6 right-6"></i>
+                        <div id="recipe-content" class="relative z-10 text-gray-700 leading-relaxed font-body text-base whitespace-pre-wrap">
+                            <!-- Recipe goes here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 8 & 9. Company Info & Location Section -->
-    <section id="lokasi" class="py-20 bg-white relative">
+    <section id="lokasi" class="py-20 bg-[#FDF8F5] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-3 gap-8">
                 
-                <div class="lg:col-span-1 glass-card p-8 gs-reveal bg-[#FDF8F5]">
+                <div class="lg:col-span-1 glass-card p-8 gs-reveal bg-white">
                     <h3 class="text-2xl font-head font-bold text-brand-deep mb-6 border-b border-gray-200 pb-4">Maklumat Syarikat</h3>
                     <div class="space-y-4 text-sm text-gray-700">
                         <div><p class="text-gray-500 text-xs uppercase tracking-wider font-bold mb-1">Nama Perniagaan</p><p class="font-bold text-brand-deep text-base">TADIKA KUALITI TEKNOLOGI</p></div>
@@ -608,13 +775,13 @@
                 <div class="lg:col-span-2 gs-reveal">
                     <h3 class="text-3xl font-head font-bold text-brand-deep mb-6 text-center md:text-left">Lokasi Kami</h3>
                     <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-[#FDF8F5] rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-12 h-12 bg-brand-sky/20 rounded-full flex items-center justify-center text-brand-sky text-xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
                             <h4 class="font-head font-bold text-xl text-brand-deep mb-2">Terengganu</h4>
                             <p class="text-gray-600 text-sm mb-4 min-h-[60px]">Quety Qeeds, Lot 8756, Kampung Pak Tuyu, 21030 Kuala Nerus, Terengganu.</p>
                             <a href="https://maps.app.goo.gl/F1Rcymth1LdPyixE7?g_st=ic" target="_blank" class="inline-block text-brand-deep font-bold text-sm hover:text-brand-sky transition-colors">Buka di Google Maps <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
                         </div>
-                        <div class="bg-[#FDF8F5] rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-12 h-12 bg-brand-yellow/30 rounded-full flex items-center justify-center text-brand-yellow text-xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
                             <h4 class="font-head font-bold text-xl text-brand-deep mb-2">Selangor</h4>
                             <p class="text-gray-600 text-sm mb-4 min-h-[60px]">No. 29/45D, Taman Saira, Bandar Sultan Suleiman, 42000 Pelabuhan Klang, Selangor.</p>
@@ -665,6 +832,7 @@
                         <li><a href="#tentang-kami" class="hover:text-brand-sky transition-colors">Tentang Kami</a></li>
                         <li><a href="#kurikulum" class="hover:text-brand-sky transition-colors">Kurikulum</a></li>
                         <li><a href="#jadual" class="hover:text-brand-sky transition-colors">Jadual Harian</a></li>
+                        <li><a href="#galeri" class="hover:text-brand-sky transition-colors">Galeri Foto</a></li>
                         <li><a href="#lokasi" class="hover:text-brand-sky transition-colors">Lokasi Kami</a></li>
                     </ul>
                 </div>
@@ -1013,7 +1181,6 @@
                 food.y = padding + Math.random() * (pCanvas.height - padding * 2);
             }
 
-            // Track mouse/touch inside canvas
             function updateMousePos(clientX, clientY) {
                 const rect = pCanvas.getBoundingClientRect();
                 mousePos.x = clientX - rect.left;
@@ -1023,7 +1190,7 @@
             pCanvas.addEventListener('mousemove', (e) => updateMousePos(e.clientX, e.clientY));
             pCanvas.addEventListener('touchstart', (e) => updateMousePos(e.touches[0].clientX, e.touches[0].clientY), {passive: true});
             pCanvas.addEventListener('touchmove', (e) => {
-                if(gameRunning) e.preventDefault(); // Prevent scrolling while playing
+                if(gameRunning) e.preventDefault(); 
                 updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
             }, {passive: false});
 
@@ -1037,16 +1204,13 @@
             }
 
             function drawGame() {
-                // Clear background
                 pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
 
-                // Draw Food (Apple/Red dot)
                 pCtx.beginPath();
                 pCtx.arc(food.x, food.y, food.radius, 0, 2 * Math.PI);
-                pCtx.fillStyle = '#FF0000'; // Brand Red
+                pCtx.fillStyle = '#FF0000'; 
                 pCtx.fill();
                 pCtx.closePath();
-                // Add simple stem to make it look like an apple
                 pCtx.beginPath();
                 pCtx.moveTo(food.x, food.y - food.radius);
                 pCtx.lineTo(food.x + 4, food.y - food.radius - 6);
@@ -1055,31 +1219,27 @@
                 pCtx.stroke();
                 pCtx.closePath();
 
-                // Draw Pac-Man
                 pCtx.save();
                 pCtx.translate(player.x, player.y);
                 pCtx.rotate(player.angle);
 
-                // Animate mouth opening and closing
                 const time = Date.now() / 150;
                 const mouthOffset = gameRunning ? Math.abs(Math.sin(time)) * 0.25 : 0.1; 
 
                 pCtx.beginPath();
                 pCtx.arc(0, 0, player.radius, mouthOffset * Math.PI, (2 - mouthOffset) * Math.PI);
                 pCtx.lineTo(0, 0);
-                pCtx.fillStyle = '#FFF200'; // Brand Yellow
+                pCtx.fillStyle = '#FFF200'; 
                 pCtx.fill();
                 
-                // Border for Pacman
                 pCtx.lineWidth = 2;
                 pCtx.strokeStyle = '#334155';
                 pCtx.stroke();
                 pCtx.closePath();
 
-                // Draw Eye
                 pCtx.beginPath();
                 pCtx.arc(0, -12, 4, 0, 2 * Math.PI);
-                pCtx.fillStyle = '#0054A6'; // Brand Deep Blue
+                pCtx.fillStyle = '#0054A6'; 
                 pCtx.fill();
                 pCtx.closePath();
 
@@ -1089,24 +1249,20 @@
             function updateGameLoop() {
                 if (!gameRunning) return;
 
-                // Move player towards cursor
                 const dx = mousePos.x - player.x;
                 const dy = mousePos.y - player.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 
-                // Move only if cursor is a bit far
                 if (dist > 5) {
                     player.x += (dx / dist) * player.speed;
                     player.y += (dy / dist) * player.speed;
                     player.angle = Math.atan2(dy, dx);
                 }
 
-                // Check collision with food
                 const distToFood = Math.sqrt(Math.pow(player.x - food.x, 2) + Math.pow(player.y - food.y, 2));
                 if (distToFood < player.radius + food.radius) {
                     gameScore += 10;
                     scoreEl.innerText = gameScore;
-                    // Add simple bump animation to score
                     anime({ targets: scoreEl, scale: [1.5, 1], duration: 400, easing: 'easeOutElastic(1, .8)' });
                     spawnFood();
                 }
@@ -1115,8 +1271,220 @@
                 requestAnimationFrame(updateGameLoop);
             }
 
-            // Initial setup
             setTimeout(resizeCanvas, 100);
+
+            // --- 7. Lightbox / Album Logic ---
+            const albumData = {
+                'album1': [
+                    "album1-1.JPG",
+                    "album1-2.JPG",
+                    "album1-3.JPG",
+                    "album1-4.JPG",
+                    "album1-5.JPG",
+                    "album1-6.JPG",
+                    "album1-7.JPG",
+                    "album1-8.JPG",
+                    "album1-9.JPG"
+                ],
+                'album2': [
+                    "album2-1.JPG",
+                    "album2-2.JPG"
+                ],
+                'album3': [
+                    "album3-1.JPG",
+                    "album3-2.JPG",
+                    "album3-3.JPG"
+                ],
+                'album4': ["album4-1.JPG"],
+                'album5': ["album5-1.JPG"],
+                'album6': ["album6-1.JPG"],
+                'album7': ["album7-1.JPG"],
+                'album8': ["album8-1.JPG"],
+                'album9': ["album9-1.JPG"]
+            };
+
+            let currentAlbumId = '';
+            let currentImageIndex = 0;
+
+            window.openAlbum = function(albumId) {
+                currentAlbumId = albumId;
+                currentImageIndex = 0;
+                
+                updateLightboxContent();
+                
+                const lightbox = document.getElementById('lightbox');
+                const img = document.getElementById('lightbox-img');
+                
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                
+                setTimeout(() => {
+                    lightbox.classList.remove('opacity-0');
+                    lightbox.classList.add('opacity-100');
+                    img.classList.remove('scale-95');
+                    img.classList.add('scale-100');
+                }, 10);
+            };
+
+            window.closeLightbox = function() {
+                const lightbox = document.getElementById('lightbox');
+                const img = document.getElementById('lightbox-img');
+                
+                lightbox.classList.remove('opacity-100');
+                lightbox.classList.add('opacity-0');
+                img.classList.remove('scale-100');
+                img.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    lightbox.classList.remove('flex');
+                    lightbox.classList.add('hidden');
+                }, 300);
+            };
+
+            window.nextAlbumImage = function(e) {
+                if(e) e.stopPropagation();
+                const images = albumData[currentAlbumId];
+                if(images && images.length > 0) {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    updateLightboxContent();
+                }
+            };
+
+            window.prevAlbumImage = function(e) {
+                if(e) e.stopPropagation();
+                const images = albumData[currentAlbumId];
+                if(images && images.length > 0) {
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    updateLightboxContent();
+                }
+            };
+
+            function updateLightboxContent() {
+                const images = albumData[currentAlbumId];
+                const imgEl = document.getElementById('lightbox-img');
+                const counterEl = document.getElementById('lightbox-counter');
+                
+                if (images && images.length > 0) {
+                    imgEl.src = images[currentImageIndex];
+                    counterEl.innerText = `${currentImageIndex + 1} / ${images.length}`;
+                } else {
+                    imgEl.src = "https://via.placeholder.com/800x600?text=Tiada+Gambar";
+                    counterEl.innerText = "0 / 0";
+                }
+            }
+
+            // --- 8. Gemini API: Lunchbox Recipe Generator Logic ---
+            // Sila masukkan Gemini API Key anda di sini apabila fail ini dimuat turun ke komputer anda.
+            // Sila layari https://aistudio.google.com/ untuk mendapatkan API Key percuma.
+            const apiKey = ""; 
+
+            async function fetchWithRetry(url, options, maxRetries = 5) {
+                const delays = [1000, 2000, 4000, 8000, 16000];
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        const response = await fetch(url, options);
+                        if (!response.ok) {
+                            const errorData = await response.json().catch(() => ({}));
+                            throw new Error(`HTTP ralat! status: ${response.status} - ${errorData.error?.message || 'Ralat tidak diketahui'}`);
+                        }
+                        return await response.json();
+                    } catch (error) {
+                        if (i === maxRetries - 1) throw error;
+                        console.warn(`Percubaan ${i + 1} gagal. Mencuba semula dalam ${delays[i]}ms...`);
+                        await new Promise(res => setTimeout(res, delays[i]));
+                    }
+                }
+            }
+
+            window.generateRecipe = async function() {
+                const ingredientsInput = document.getElementById('ingredients-input').value.trim();
+                const btn = document.getElementById('btn-generate-recipe');
+                const loadingContainer = document.getElementById('recipe-loading');
+                const resultContainer = document.getElementById('recipe-result-container');
+                const contentContainer = document.getElementById('recipe-content');
+                const errorContainer = document.getElementById('recipe-error');
+
+                if (!ingredientsInput) {
+                    showToast("Sila masukkan senarai bahan-bahan di dapur anda terlebih dahulu!");
+                    return;
+                }
+
+                // UI Loading State
+                btn.disabled = true;
+                btn.style.opacity = '0.7';
+                resultContainer.classList.add('hidden');
+                resultContainer.classList.remove('opacity-100');
+                errorContainer.classList.add('hidden');
+                loadingContainer.classList.remove('hidden');
+
+                const prompt = `Anda adalah seorang pakar nutrisi kanak-kanak dan tukang masak bekal (bento) yang kreatif. 
+Terdapat bahan-bahan berikut di dapur saya: ${ingredientsInput}. 
+
+Berdasarkan bahan-bahan ini, cadangkan SATU resipi bekal tadika yang mudah disediakan, sihat, dan pasti digemari kanak-kanak. 
+Jika bahan tidak mencukupi, anda boleh mengandaikan saya mempunyai bahan asas dapur seperti garam, gula, minyak, mentega, atau lada hitam.
+
+Format jawapan anda dalam Bahasa Melayu yang mesra dan ceria:
+1. Berikan tajuk resipi yang comel (Contoh: "Bento Bintang Kejora").
+2. Senaraikan bahan-bahan yang diperlukan.
+3. Terangkan langkah-langkah penyediaan dengan ringkas dan jelas (maksimum 4 langkah).
+4. Berikan satu "Tips Rahsia Ibu" (sebagai contoh: cara memotong sayur menjadi bentuk yang menarik, atau cara memujuk anak makan sayur tersebut).
+
+Pastikan tiada format markdown yang terlalu kompleks seperti (#). Gunakan (**) untuk menebalkan teks jika perlu.`;
+
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ parts: [{ text: prompt }] }],
+                    systemInstruction: { 
+                        parts: [{ text: "Berikan jawapan yang mesra, informatif, dan praktikal untuk memudahkan urusan ibu bapa pada waktu pagi." }] 
+                    }
+                };
+
+                try {
+                    const result = await fetchWithRetry(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                    
+                    if (generatedText) {
+                        // Tukarkan format markdown ringkas kepada HTML
+                        let formattedText = generatedText
+                            .replace(/\*\*(.*?)\*\*/g, '<strong class="text-brand-deep">$1</strong>')
+                            .replace(/\*(.*?)\*/g, '<em>$1</em>');
+                        
+                        contentContainer.innerHTML = formattedText;
+                        
+                        loadingContainer.classList.add('hidden');
+                        resultContainer.classList.remove('hidden');
+                        
+                        setTimeout(() => {
+                            resultContainer.classList.add('opacity-100');
+                        }, 50);
+                        
+                        resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    } else {
+                        throw new Error("Respons dari AI tidak lengkap.");
+                    }
+                } catch (error) {
+                    console.error("Gemini API Error:", error);
+                    loadingContainer.classList.add('hidden');
+                    
+                    let errorMsg = "Maaf, tukang masak AI kita sedang berehat sebentar. Sila cuba lagi.";
+                    if (error.message.includes("403") || error.message.includes("unregistered callers")) {
+                        errorMsg = "Ralat Akses: Sila masukkan 'Google Gemini API Key' pada fail kod HTML anda (bahagian const apiKey = \"\") untuk mengaktifkan fungsi AI ini.";
+                    } else {
+                        errorMsg += " (" + error.message + ")";
+                    }
+                    
+                    errorContainer.innerText = errorMsg;
+                    errorContainer.classList.remove('hidden');
+                } finally {
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                }
+            };
 
         });
     </script>
