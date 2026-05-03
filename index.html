@@ -1429,13 +1429,9 @@ Format jawapan anda dalam Bahasa Melayu yang mesra dan ceria:
 
 Pastikan tiada format markdown yang terlalu kompleks seperti (#). Gunakan (**) untuk menebalkan teks jika perlu.`;
 
-                // URL ditukar kepada model 'gemini-1.5-flash' supaya berfungsi dengan API key anda di GitHub awam
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
                 const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                    systemInstruction: { 
-                        parts: [{ text: "Berikan jawapan yang mesra, informatif, dan praktikal untuk memudahkan urusan ibu bapa pada waktu pagi." }] 
-                    }
+                    contents: [{ parts: [{ text: "Sila berikan jawapan yang mesra, informatif, dan praktikal untuk memudahkan urusan ibu bapa pada waktu pagi.\n\n" + prompt }] }]
                 };
 
                 try {
